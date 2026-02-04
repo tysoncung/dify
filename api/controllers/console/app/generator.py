@@ -88,7 +88,6 @@ class RuleGenerateApi(Resource):
                 model_config=args.model_config_data,
                 no_variable=args.no_variable,
                 user_id=account.id,
-                app_id=None,
             )
         except ProviderTokenNotInitError as ex:
             raise ProviderNotInitializeError(ex.description)
@@ -124,7 +123,6 @@ class RuleCodeGenerateApi(Resource):
                 model_config=args.model_config_data,
                 code_language=args.code_language,
                 user_id=account.id,
-                app_id=None,
             )
         except ProviderTokenNotInitError as ex:
             raise ProviderNotInitializeError(ex.description)
@@ -159,7 +157,6 @@ class RuleStructuredOutputGenerateApi(Resource):
                 instruction=args.instruction,
                 model_config=args.model_config_data,
                 user_id=account.id,
-                app_id=None,
             )
         except ProviderTokenNotInitError as ex:
             raise ProviderNotInitializeError(ex.description)
